@@ -25,13 +25,13 @@
                                     <constraint firstAttribute="height" constant="80" id="ZQG-tk-tz6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a positive whole number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw7-Vq-g6p">
                                 <rect key="frame" x="184.5" y="110" width="231" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. 4, 8, or 29" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-rj-Dbt">
@@ -42,7 +42,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVC-A9-fpB">
                                 <rect key="frame" x="277" y="221" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="isItPrime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYU-7l-hUe"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a positive whole number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVK-Zt-t1O">
+                                <rect key="frame" x="185" y="259" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -51,13 +60,19 @@
                             <constraint firstItem="8vP-Ll-heh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Ghe-VA-xyh"/>
                             <constraint firstItem="wMi-rj-Dbt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ift-ME-jh7"/>
                             <constraint firstItem="wMi-rj-Dbt" firstAttribute="top" secondItem="xw7-Vq-g6p" secondAttribute="bottom" constant="30" id="UVS-oJ-83m"/>
+                            <constraint firstItem="PVK-Zt-t1O" firstAttribute="top" secondItem="DVC-A9-fpB" secondAttribute="bottom" constant="8" id="ZLG-Ge-Lau"/>
                             <constraint firstItem="8vP-Ll-heh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aSM-fY-qRV"/>
                             <constraint firstItem="xw7-Vq-g6p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dfZ-Mb-2za"/>
                             <constraint firstAttribute="trailing" secondItem="wMi-rj-Dbt" secondAttribute="trailing" constant="20" id="hza-rd-yU8"/>
                             <constraint firstItem="DVC-A9-fpB" firstAttribute="top" secondItem="wMi-rj-Dbt" secondAttribute="bottom" constant="30" id="ji4-gp-bRb"/>
+                            <constraint firstItem="PVK-Zt-t1O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUN-Ki-JIE"/>
                             <constraint firstItem="DVC-A9-fpB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vFb-9Z-EyE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="wMi-rj-Dbt" id="aBf-3g-FtD"/>
+                        <outlet property="resultLabel" destination="PVK-Zt-t1O" id="1nu-p0-Knm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
